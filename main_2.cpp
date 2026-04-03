@@ -2,16 +2,16 @@
 #include <windows.h>
 using namespace std;
 
-const int N = 10000000;
+const int N = 1000000;
 int a[N];
 
 void init() {
     for (int i = 0; i < N; i++) {
-        a[i] = 1;
+        a[i] = 3;
     }
 }
 
-// 平凡算法，一个一个加
+// 骞冲嚒绠楁硶锛屼竴涓竴涓姞
 long long naive() {
     long long sum = 0;
     for (int i = 0; i < N; i++) {
@@ -20,7 +20,7 @@ long long naive() {
     return sum;
 }
 
-// 两路优化
+// 涓よ矾浼樺寲
 long long optimized() {
     long long sum1 = 0, sum2 = 0;
 
@@ -36,7 +36,7 @@ int main() {
     init();
 
     LARGE_INTEGER head, tail, freq;
-    QueryPerformanceFrequency(&freq);//内置精确时间比较
+    QueryPerformanceFrequency(&freq);//鍐呯疆绮剧‘鏃堕棿姣旇緝
 
     long long s1, s2;
 
